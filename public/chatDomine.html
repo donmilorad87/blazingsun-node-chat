@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat app</title>
+        <link rel="shortcut icon" href="/img/blazingSun.ico">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="module" async src="/js/chat.js"></script>
+
+    </head>
+    <body>
+        <header><h1>Chat Domine</h1></header>
+        <nav>
+           <div> 
+               <span> Room name: </span><h1 id="roomName"></h1>
+            </div>
+            <div id="userList"></div>
+        </nav>
+        <main>
+            <div id="messages"></div>
+            <form id="message-form">
+                <input type="text" name="message" placheholder="message" value="" autocomplete="off">
+                <button> Send </button>
+            </form>   
+        </main>
+        <aside>
+            <button id="send-location">Send Location</button>
+            <div id="locations"></div>
+
+            <button id="krma">Send Location</button>
+        </aside>
+        <footer>
+            Blazing Sun 2020. Sva prava zadržana.
+        </footer>
+        <template id="message-template">
+            <div>
+                <p></p>
+            </div>
+        </template>
+
+    </body>
+</html>

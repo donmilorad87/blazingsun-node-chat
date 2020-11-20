@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat app</title>
+        <link rel="shortcut icon" href="/img/blazingSun.ico">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+
+    </head>
+    <body>
+        <div class="centered-form">
+            <div class="centered-form__box">
+                <h1>Join Page</h1>
+                <form id ="form">
+                    <label>Display name</label>
+                    <input type="text" name="username" placeholder="Enter your username" required>
+                    <label>Room name</label>
+                 
+                    <input type="radio" id="domine" name="room" value="domine" checked> 
+                    <label for="domine">domine</label><br>
+     
+                    <input type="radio" id="chat" name="room" value="obican">
+                    <label for="chat">Obican Chat</label>
+                    
+                    <button id="btn"> Join </button>
+                </form>
+                <script>
+                document.getElementById("btn").addEventListener('click', ()=>{
+                    if(document.getElementById('domine').checked){
+                        document.getElementById('form').action = '/chatDomine.html'
+                    }else{
+                        document.getElementById('form').action = '/chat.html'
+                    }
+                    
+                    document.getElementById("form").submit();
+                })
+
+                 
+
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
